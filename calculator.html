@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>
+      <button
+        onclick="
+        updateCalculator(1)
+      "
+      >
+        1
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(2)
+      "
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(3)
+      "
+      >
+        3
+      </button>
+      <button
+        onclick="
+        updateCalculator('+')
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculator(4)
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(5)
+      "
+      >
+        5
+      </button>
+      <button
+        onclick="
+        updateCalculator(6 )
+      "
+      >
+        6
+      </button>
+      <button
+        onclick="
+        updateCalculator('-')
+      "
+      >
+        -
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        updateCalculator(7)
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(8)
+      "
+      >
+        8
+      </button>
+      <button
+        onclick="
+        updateCalculator(9)
+      "
+      >
+        9
+      </button>
+      <button
+        onclick="
+        updateCalculator('*')
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculator('0')
+      "
+      >
+        0
+      </button>
+      </button>
+      <button
+        onclick="
+        updateCalculator('/')
+      "
+      >
+        /
+      </button>
+      </button>
+      
+      
+      <button
+        onclick="
+    calculator = eval(calculator)
+    console.log(calculator);
+  "
+      >
+        =
+      </button>
+    <button
+        onclick="
+        calculator = '';
+        console.log(calculation);
+      "
+      >
+        Clear
+      </button>
+
+    <script>
+      let calculator = ''
+      function updateCalculator(value) {
+        calculator += value
+        console.log(calculator)
+      }
+    </script>
+  </body>
+</html>
