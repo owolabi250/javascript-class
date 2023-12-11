@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <title>Calculator</title>
+    <link rel="stylesheet" href="styles/10icalculator.css">
   </head>
   <body>
     <p>
-      <button
+      <p class="js-calculatorValue calculatorValue"></p>
+      <button class="dark-button"
         onclick="
         updateCalculator(1)
       "
@@ -13,7 +15,7 @@
         1
       </button>
 
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(2)
       "
@@ -21,14 +23,14 @@
         2
       </button>
 
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(3)
       "
       >
         3
       </button>
-      <button
+      <button class="brown-button"
         onclick="
         updateCalculator('+')
       "
@@ -38,7 +40,7 @@
     </p>
 
     <p>
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(4)
       "
@@ -46,21 +48,21 @@
         4
       </button>
 
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(5)
       "
       >
         5
       </button>
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(6 )
       "
       >
         6
       </button>
-      <button
+      <button class="brown-button"
         onclick="
         updateCalculator('-')
       "
@@ -69,7 +71,7 @@
       </button>
     </p>
     <p>
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(7)
       "
@@ -77,21 +79,21 @@
         7
       </button>
 
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(8)
       "
       >
         8
       </button>
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator(9)
       "
       >
         9
       </button>
-      <button
+      <button class="brown-button"
         onclick="
         updateCalculator('*')
       "
@@ -101,25 +103,21 @@
     </p>
 
     <p>
-      <button
+      <button class="dark-button"
         onclick="
         updateCalculator('0')
       "
       >
         0
       </button>
-      </button>
-      <button
+      <button class="dark-button"
         onclick="
-        updateCalculator('/')
+        updateCalculator('.')
       "
       >
-        /
+        .
       </button>
-      </button>
-      
-      
-      <button
+      <button class="dark-button"
         onclick="
     calculator = eval(calculator)
     solution()
@@ -128,7 +126,15 @@
       >
         =
       </button>
-    <button
+      <button class="brown-button"
+        onclick="
+        updateCalculator('/')
+      "
+      >
+        /
+      </button>
+      <p>
+    <button class="dark-button"
         onclick="
         calculator = '';
         solution()
@@ -137,23 +143,10 @@
       >
         Clear
       </button>
+      </p>
+      
 
-      <p class="js-calculatorValue"></p>
-
-    <script>
-      let calculator = localStorage.getItem('calculator') || ''
-      solution()
-
-      function updateCalculator(value) {
-        calculator += value
-        solution()
-        localStorage.setItem('calculator', calculator)
-      }
-
-      function solution() {
-        document.querySelector('.js-calculatorValue').innerHTML = calculator
-      }
-
+    <script src="scripts/10icalculator.js">
     </script>
   </body>
 </html>

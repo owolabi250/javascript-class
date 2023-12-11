@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="firstButton">9a</button>
+    <button class="secondButton">9b</button>
+
+    <hr />
+
+    <button onclick="toss('heads')" class="heads">heads</button>
+    <button onclick="toss('tails')" class="tails">tails</button>
+    <p class="js-result"></p>
+
+    <hr />
+
+    <input
+      placeholder="Name"
+      class="inputField"
+      onkeydown="handleNameKeydown(event)"
+    />
+    <button class="nameButton" onclick="register()">submit</button>
+    <p class="js-name"></p>
+
+    <script>
+      const button9a = document.querySelector('.firstButton')
+      console.log(button9a)
+
+      const button9b = document.querySelector('.secondButton')
+      button9b.innerText = '9b done!'
+
+      function toss(choice) {
+        let result
+        if (choice === 'heads') {
+          result = 'heads'
+        } else {
+          result = 'tails'
+        }
+        console.log(result)
+        document.querySelector('.js-result').innerHTML = `You chose: ${result}`
+      }
+
+      function register() {
+        const inputField = document.querySelector('.inputField')
+        document.querySelector(
+          '.js-name'
+        ).innerHTML = `Your name is: ${inputField.value}`
+      }
+
+      function handleNameKeydown(event) {
+        if (event.key === 'Enter') {
+          register()
+        }
+      }
+    </script>
+  </body>
+</html>

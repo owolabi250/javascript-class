@@ -1,0 +1,61 @@
+.amazon-button {
+  background-color: rgb(225, 216, 20);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 20px 0px 0px;
+}
+
+.uber-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 20px 0px 20px;
+}
+
+.selected {
+  background-color: rgb(230, 230, 230);
+  color: #000;
+}
+
+.game {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 20px 0px 0px;
+}
+
+.is-toggled {
+  background-color: rgb(230, 230, 230);
+  color: #000;
+}
+
+.game-music-tech {
+  background-color: rgb(230, 230, 230);;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 20px 0px 0px;
+}
+
+.is-toggled-gmt {
+  background-color: black;
+  color: #fff;
+}

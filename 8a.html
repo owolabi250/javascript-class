@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <button
+        onclick="
+        updateCalculator(1)
+      "
+      >
+        1
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(2)
+      "
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(3)
+      "
+      >
+        3
+      </button>
+      <button
+        onclick="
+        updateCalculator('+')
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculator(4)
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(5)
+      "
+      >
+        5
+      </button>
+      <button
+        onclick="
+        updateCalculator(6 )
+      "
+      >
+        6
+      </button>
+      <button
+        onclick="
+        updateCalculator('-')
+      "
+      >
+        -
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        updateCalculator(7)
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        updateCalculator(8)
+      "
+      >
+        8
+      </button>
+      <button
+        onclick="
+        updateCalculator(9)
+      "
+      >
+        9
+      </button>
+      <button
+        onclick="
+        updateCalculator('*')
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculator('0')
+      "
+      >
+        0
+      </button>
+      </button>
+      <button
+        onclick="
+        updateCalculator('/')
+      "
+      >
+        /
+      </button>
+      </button>
+      
+      
+      <button
+        onclick="
+    calculator = eval(calculator)
+    console.log(calculator);
+    localStorage.setItem('calculator', calculator);
+  "
+      >
+        =
+      </button>
+    <button
+        onclick="
+        calculator = '';
+        console.log(calculator);
+        localStorage.setItem('calculator', calculator);
+      "
+      >
+        Clear
+      </button>
+
+      <hr>
+      <button onclick=" playGame('heads')">heads</button>
+      <button onclick="playGame('tails')">tails</button>
+
+
+    <script>
+      // lesson 8 exercise - object (8a)
+      const product = {
+        name: 'basketball',
+        price: 2095,
+      }
+      console.log(product)
+
+      // lesson 8 exercise - object (8b)
+      product.price += 500
+      console.log(product.price)
+
+      // lesson 8 exercise - object (8c)
+      product['delivery-time'] = '3 days'
+      console.log(product)
+
+      // lesson 8 exercise - object (8d)
+
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1
+        } else {
+          return product2
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 200,
+      }
+      const product2 = {
+        name: 'mug',
+        price: 2000,
+      }
+
+      console.log(comparePrice(product1, product2))
+
+      // lesson 8 exercise - object (8e)
+
+      // function isSameProduct(product3, product4) {
+      //   if (
+      //     product3.name === product4.name &&
+      //     product3.price === product4.price
+      //   ) {
+      //     return true
+      //   } else {
+      //     return false
+      //   }
+      // }
+
+      function isSameProduct(product3, product4) {
+        return (
+          product3.name === product4.name && product3.price === product4.price
+        )
+      }
+
+      const product3 = {
+        name: 'desktop',
+        price: 150000,
+      }
+      const product4 = {
+        name: 'desktop',
+        price: 150000,
+      }
+
+      console.log(isSameProduct(product3, product4))
+
+      // lesson 8 exercise - object (8f)
+
+      const convertToString = 'Good Morning'
+      console.log(convertToString.toLocaleLowerCase())
+
+      // lesson 8 exercise - object (8g)
+      const word = 'test'
+      const repeatCount = 2
+      const repeatWord = word.repeat(2)
+      console.log(repeatWord)
+
+      console.log('test'.repeat(2))
+
+      // lesson 8 exercise - object (8h)
+
+      let calculator = localStorage.getItem('calculator') || ''; 
+
+      function updateCalculator(value) {
+        calculator += value;
+        console.log(calculator);
+
+        // Save the updated calculator value to local storage
+        localStorage.setItem('calculator', calculator);
+      }
+
+      // lesson 8 exercise - object (8i)
+      
+      
+      const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(guess) {
+        const randomNumber = Math.random()
+        
+        const result = randomNumber < 0.5 ? 'heads' : 'tails'
+        
+        console.log(guess === result ? 'you win' : 'you lose');
+
+      // lesson 8 exercise - object (8j & k)
+
+        if (guess === result) {
+          score.wins++
+        } else {
+          score.losses++
+        }
+        console.log(score);
+
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>
